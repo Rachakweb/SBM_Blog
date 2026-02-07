@@ -413,6 +413,89 @@ export default function Home() {
             </div>
           </section>
 
+          {/* About Section */}
+          <section id="about" className="py-20 px-4 bg-black relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-900/10 rounded-full blur-3xl -z-10" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-900/10 rounded-full blur-3xl -z-10" />
+
+            <div className="max-w-7xl mx-auto">
+              <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
+                <div className="w-full md:w-1/2">
+                  <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                      About the Internship
+                    </span>
+                  </h2>
+                  <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                    This blog documents the field exposure journey of <span className="text-blue-400 font-semibold">TULIP Interns</span> (The Urban Learning Internship Program) under the <span className="text-green-400 font-semibold">Swachh Bharat Mission (Urban)</span> in Surat.
+                  </p>
+                  <p className="text-gray-400 leading-relaxed">
+                    Over the course of 10 days (Jan 21–31, 2026), we explored various facets of urban sanitation and waste management. From understanding source segregation at the household level to witnessing advanced wastewater treatment technologies at STPs and learning about the 5R principles, this journey has provided invaluable insights into the city's cleanliness ecosystem and the daily operations that keep Surat clean.
+                  </p>
+                </div>
+                <div className="w-full md:w-1/2">
+                  <div className="relative h-64 md:h-80 w-full rounded-2xl overflow-hidden border border-gray-800 shadow-2xl shadow-blue-500/10 group">
+                    <Image
+                      src="/schedule.jpg"
+                      alt="Field Exposure Schedule"
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-4 left-4 p-4">
+                      <p className="text-white font-bold text-lg">Field Exposure Schedule</p>
+                      <p className="text-blue-400 text-sm">21–31 January 2026</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Schedule Table */}
+              <div className="bg-gray-900/50 border border-gray-800 rounded-2xl overflow-hidden backdrop-blur-sm">
+                <div className="p-6 border-b border-gray-800 flex justify-between items-center">
+                  <h3 className="text-xl font-bold text-white flex items-center">
+                    <Calendar className="mr-2 text-blue-400" size={20} />
+                    Detailed Schedule
+                  </h3>
+                  <div className="text-xs text-gray-500 uppercase tracking-widest font-semibold">Swachh Survekshan 2026</div>
+                </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left text-sm text-gray-400">
+                    <thead className="bg-gray-800/50 text-gray-200 uppercase font-bold text-xs">
+                      <tr>
+                        <th className="p-4 whitespace-nowrap">Date</th>
+                        <th className="p-4 whitespace-nowrap">Zone</th>
+                        <th className="p-4 whitespace-nowrap">Facility</th>
+                        <th className="p-4 whitespace-nowrap hidden md:table-cell">Key Learnings</th>
+                        <th className="p-4 whitespace-nowrap">Authority</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-800">
+                      {[
+                        { date: "21-01-26", zone: "South-West", facility: "Residential Area", learnings: "Door-to-door collection, Source segregation, Citizen role", auth: "Dr. Ketan Garasiya" },
+                        { date: "22-01-26", zone: "South-West", facility: "Bulk Waste Gen (BWG)", learnings: "On-site processing, Compliance, Documentation", auth: "Dr. Ketan Garasiya" },
+                        { date: "23-01-26", zone: "West", facility: "STP (Bhesan)", learnings: "Sorting process, Safety, Recovery efficiency", auth: "Dr. Rikita Patel" },
+                        { date: "27-01-26", zone: "South-West", facility: "Solid Waste Facility", learnings: "Plastic sorting, EPR, Ban enforcement", auth: "Dr. Ketan Garasiya" },
+                        { date: "28-01-26", zone: "South-West", facility: "Public Toilet (CT/PT)", learnings: "O&M practices, Hygiene, Feedback mechanism", auth: "Dr. Ketan Garasiya" },
+                        { date: "29-01-26", zone: "South A", facility: "School", learnings: "Eco-clubs, IEC activities, Student participation", auth: "Dr. Kinjal Patel" },
+                        { date: "30-01-26", zone: "South-East", facility: "STP (Dindoli)", learnings: "Treatment process, Reuse, Environmental compliance", auth: "Dr. Nimesh Desai" },
+                        { date: "31-01-26", zone: "West", facility: "5R Center", learnings: "Refuse, Reduce, Reuse, Recycle, Repair principles", auth: "Dr. Rikita Patel" }
+                      ].map((item, index) => (
+                        <tr key={index} className="hover:bg-gray-800/30 transition-colors">
+                          <td className="p-4 font-medium text-white whitespace-nowrap">{item.date}</td>
+                          <td className="p-4">{item.zone}</td>
+                          <td className="p-4 text-blue-300">{item.facility}</td>
+                          <td className="p-4 hidden md:table-cell">{item.learnings}</td>
+                          <td className="p-4 text-gray-500">{item.auth}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Blog Section */}
           <section id="blog" className="py-20 px-4 bg-gradient-to-b from-black via-gray-900 to-black">
             <div className="max-w-7xl mx-auto">
