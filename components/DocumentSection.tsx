@@ -49,7 +49,7 @@ export default function DocumentSection() {
                         </div>
 
                         <div className="flex items-center justify-between mt-8 pt-6 border-t border-gray-700/50">
-                            <span className="text-gray-500 text-sm">Format: PDF • Size: 4.1 MB</span>
+                            <span className="text-gray-500 text-sm">Format: PDF • Size: 2.41 MB</span>
                             <a
                                 href="/blog.pdf"
                                 download
