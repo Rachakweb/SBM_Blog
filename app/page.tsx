@@ -6,7 +6,7 @@ import LoadingScreen from '@/components/LoadingScreen';
 import Navbar from '@/components/Navbar';
 import DocumentSection from '@/components/DocumentSection';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, X, MapPin, User, Calendar, Target, CheckCircle2, Lightbulb, Image as ImageIcon } from 'lucide-react';
+import { ArrowRight, X, MapPin, User, Calendar, Target, CheckCircle2, Lightbulb, Image as ImageIcon, Linkedin, Twitter, Instagram } from 'lucide-react';
 
 interface BlogPost {
   title: string;
@@ -491,6 +491,37 @@ export default function Home() {
             <div className="flex items-center justify-center gap-2 mb-4">
               <span className="text-2xl font-bold text-white">Tulip Blog</span>
             </div>
+
+            <div className="flex justify-center gap-6 mb-8">
+              <a
+                href="https://www.linkedin.com/in/rakweb"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-500 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a
+                href="https://x.com/Ravi63450477"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="X (Twitter)"
+              >
+                <Twitter size={24} />
+              </a>
+              <a
+                href="http://instagram.com/__________.ravi._________/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-pink-500 transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={24} />
+              </a>
+            </div>
+
             <p className="text-gray-500 text-sm">
               Built with ❤️ by Rak Studio using Next.js & Tailwind CSS.
             </p>
