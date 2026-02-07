@@ -35,13 +35,18 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
                             {step === 1 && (
                                 <motion.h1
                                     key="welcome"
-                                    initial={{ opacity: 0, y: 20, filter: 'blur(10px)' }}
-                                    animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                                    exit={{ opacity: 0, y: -20, filter: 'blur(10px)' }}
-                                    transition={{ duration: 0.8 }}
-                                    className="text-4xl md:text-6xl font-bold tracking-wider"
+                                    initial={{ opacity: 0, scale: 0.5, filter: 'blur(10px)' }}
+                                    animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+                                    exit={{ opacity: 0, scale: 1.5, filter: 'blur(20px)' }}
+                                    transition={{ duration: 0.8, ease: "backOut" }}
+                                    className="text-center"
                                 >
-                                    Welcome to my blog
+                                    <span className="block text-6xl md:text-8xl font-black tracking-tighter mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-pulse">
+                                        Welcome
+                                    </span>
+                                    <span className="block text-xl md:text-2xl text-gray-400 font-light tracking-[0.2em] uppercase">
+                                        to my blog
+                                    </span>
                                 </motion.h1>
                             )}
                             {step === 2 && (
