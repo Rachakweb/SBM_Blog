@@ -95,9 +95,14 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
                                     transition={{ duration: 1.2 }}
                                     className="text-center"
                                 >
-                                    <h1 className="text-4xl md:text-6xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 uppercase">
-                                        Surat Municipal Corporation
-                                    </h1>
+                                    <div className="relative w-48 h-48 mx-auto">
+                                        <Image
+                                            src="/logo.png"
+                                            alt="RAK Logo"
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
                                 </motion.div>
                             )}
                         </AnimatePresence>

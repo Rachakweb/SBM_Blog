@@ -21,8 +21,8 @@ export default function Navbar() {
                     <div className="flex items-center gap-3">
                         <div className="relative w-10 h-10">
                             <Image
-                                src="/smc-logo.png"
-                                alt="SMC Logo"
+                                src="/logo.png"
+                                alt="RAK Logo"
                                 fill
                                 className="object-contain"
                             />
