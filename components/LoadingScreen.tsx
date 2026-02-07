@@ -11,13 +11,12 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
         // Sequence of timings
         const timeouts = [
             setTimeout(() => setStep(1), 1000), // Show Welcome
-            setTimeout(() => setStep(2), 3500), // Show Name
-            setTimeout(() => setStep(3), 6000), // Show Built By
-            setTimeout(() => setStep(4), 8500), // Show Logo
+            setTimeout(() => setStep(3), 3500), // Show Built By
+            setTimeout(() => setStep(4), 6000), // Show Logo
             setTimeout(() => {
                 setStep(5);
                 setTimeout(onComplete, 1000); // Fade out and complete
-            }, 11000),
+            }, 8500),
         ];
 
         return () => timeouts.forEach(clearTimeout);
@@ -38,7 +37,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
                                     initial={{ opacity: 0, scale: 0.95, filter: 'blur(10px)' }}
                                     animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
                                     exit={{ opacity: 0, filter: 'blur(10px)' }}
-                                    transition={{ duration: 1.5, ease: "easeOut" }}
+                                    transition={{ duration: 1.2, ease: "easeOut" }}
                                     className="text-center"
                                 >
                                     <span className="block text-4xl md:text-6xl font-light tracking-[0.3em] text-white uppercase mb-4">
@@ -49,18 +48,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
                                     </span>
                                 </motion.h1>
                             )}
-                            {step === 2 && (
-                                <motion.h1
-                                    key="name"
-                                    initial={{ opacity: 0, scale: 0.9, filter: 'blur(10px)' }}
-                                    animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
-                                    exit={{ opacity: 0, scale: 1.1, filter: 'blur(10px)' }}
-                                    transition={{ duration: 0.8 }}
-                                    className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600"
-                                >
-                                    My name is Bhupendra Kumar Ravi
-                                </motion.h1>
-                            )}
+
                             {step === 3 && (
                                 <motion.div
                                     key="builtby"
