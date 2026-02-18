@@ -57,6 +57,11 @@ const blogPosts: BlogPost[] = [
         "Citizen awareness directly influences city cleanliness performance.",
         "Monitoring litter-free areas is essential for Swachh Survekshan scoring.",
         "Community participation makes sanitation systems sustainable."
+      ],
+      images: [
+        "/residential-visit-1.jpg",
+        "/residential-visit-2.jpg",
+        "/residential-visit-3.jpg"
       ]
     }
   },
@@ -606,7 +611,7 @@ export default function Home() {
             </div>
 
             <p className="text-gray-500 text-sm">
-              Built with ❤️ by Rak Studio using Next.js & Tailwind CSS.
+              Built with ❤️ by <a href="https://www.linkedin.com/in/rakweb" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Rak Studio</a> using Next.js & Tailwind CSS.
             </p>
           </footer>
         </motion.div>

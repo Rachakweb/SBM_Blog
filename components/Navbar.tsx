@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Search, Menu, X, Download } from 'lucide-react';
+import { Menu, X, Download } from 'lucide-react';
 import { useState } from 'react';
 
 import Image from 'next/image';
